@@ -1,5 +1,5 @@
 async function getComment(){
-    const response = await fetch("http://localhost:3000/comment");
+    const response = await fetch("https://comseba-introduce-yhts.onrender.com/comment");
     const jsonData = await response.json();
     return jsonData;
 }
@@ -8,7 +8,7 @@ getComment();
 
 const postComment = async(param)=>{
     console.log(param);
-    const res = await fetch("http://localhost:3000/createComment", {
+    const res = await fetch("https://comseba-introduce-yhts.onrender.com/createComment", {
         method: "POST",
         headers:{
             "Content-Type":"application/json",
