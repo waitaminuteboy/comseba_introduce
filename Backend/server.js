@@ -4,7 +4,7 @@ import fs from "fs";
 
 const __dirname = path.resolve();
 const app = express();
-app.use(express.static("frontend"));
+app.use(express.static("Frontend"));
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 const port = 80;
