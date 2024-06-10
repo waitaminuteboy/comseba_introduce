@@ -1,0 +1,352 @@
+@import url("./reset.css");
+@import url("./common.css");
+
+.home_header{
+    display:flex;
+    justify-content:space-between;
+}
+.home_header_right{
+    display: flex;
+    align-items: center;
+    gap:20px;
+}
+
+.home_header_right a{
+    color: var(--main-color);
+}
+
+.home_intro{
+    display: flex;
+    justify-content:space-between;
+    position:relative;
+    margin-top: 5rem;
+}
+
+.home_intro_left{
+    width: 50%;
+}
+
+.home_intro_left_text{
+    color: var(--main-color);
+}
+
+.home_intro_left_text p:nth-child(2){
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+.home_intro_left_link-btn{
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.home_intro_left_sns{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+}
+
+.home_intro_left_sns p{
+    font-size: 40px;
+    color: var(--main-color);
+    font-weight: 700;
+}
+
+.home_intro_left_sns img{
+    cursor: pointer;
+}
+
+.home_intro_right{
+    width: 50%;
+}
+
+.home_intro_right img{
+    width: 100%;
+}
+
+.home_description{
+    text-align: center;
+    color:var(--main-color);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.home_description p{
+    line-height: 30px;
+
+}
+
+.home_description p:nth-of-type(1){
+    margin-top: 3rem;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.home_description p:nth-of-type(2){
+    color:var(--dark-gray);
+}
+
+.home_description p:nth-of-type(n){
+    margin-top: 3rem;
+}
+
+.home_description p:nth-of-type(8){
+    margin-top: 8rem;
+}
+
+.home_description p:nth-of-type(9){
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.home_description span.bold{
+    font-weight: 700;
+    color: var(--dark-gray);
+}
+
+.home_description_logo-container{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    background-color: var(--logo-background);
+}
+
+.home_description_logo{
+    color: white;
+    font-size: 100px;
+    margin-top: 15px;
+    font-weight: 900;
+}
+
+.home_learn-skills_title{
+    color: var(--dark-gray);
+    margin-top: 20rem;
+}
+
+.home_learn-skills_title .bold{
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.home_learn-skills_title_flex-box{
+    display: flex;
+    color: var(--main-color);
+}
+
+.home_learn-skills_container{
+    width: 70%;
+    margin: 5rem auto;
+    border: 1px solid var(--dark-gray);
+    border-radius: 10px;
+    padding: 3rem;
+    position: relative;
+}
+
+.home_learn-skills_select-skill{
+    width: 50%;
+    position: absolute;
+    top: -25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.home_learn-skills_skill-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--soft-gray);
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.home_learn-skills_skill-box:hover{
+    background-color: var(--dark-gray);
+    color: white;
+}
+
+.home_learn-skills_select-skill .selected{
+    color: white;
+    background-color: var(--dark-gray);
+}
+
+.home_learn-skills_flex-box{
+    display: flex;
+    justify-content: space-around;
+}
+
+.home_learn-skills_flex-box:last-child{
+    align-items: flex-end;
+    margin-top: -2rem;
+}
+
+.home_learn-skills_step{
+    width: 20%;
+    border-radius: 20px;
+    color: white;
+    padding: 2rem;
+}
+
+.home_learn-skills_step p{
+    line-height: 20px;
+}
+
+.home_learn-skills_step p:first-child{
+    margin-bottom: 2rem;
+}
+
+.home_learn-skills_flex-box .step1{
+    height: 100px;
+    background-color: var(--dark-gray);
+}
+
+.home_learn-skills_flex-box .step2{
+    height: 160px;
+    background-color: var(--main-color);
+}
+
+.home_learn-skills_flex-box .step3{
+    height: 100px;
+    background-color: var(--soft-gray);
+    color: black;
+}
+
+.home_learn-skills_flex-box .step4{
+    height: 160px;
+    background-color: var(--soft-gray);
+    color: black;
+}
+
+.home_learn-skills_flex-box .step5{
+    height: 100px;
+    background-color: var(--dark-gray);
+}
+
+.home_learn-skills_flex-box .step6{
+    height: 160px;
+    background-color: var(--main-color);
+}
+
+.home_learn-skills-block h2{
+    color:var(--main-color);
+    margin-top:10rem;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.home_learn-skills-block_contents p{
+    text-align: center;
+    color:var(--main-color);
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.home_learn-skills-block_contents-up{
+    margin-top:8rem;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.home_learn-skills-block_contents-down{
+    margin-top:5rem;
+    display:flex;
+    justify-content: space-evenly;
+}
+
+.home_academy{
+    color:var(--main-color);
+}
+
+.home_academy .black{
+    color:var(--black);
+}
+
+.home_academy_title{
+    margin-top: 8rem;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.why{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+   
+   
+   }
+   
+   
+.why-title{
+    display: flex;
+    justify-content: flex-end;
+}
+   
+   
+.why-title-area{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end
+}
+   
+   
+.why-title p{
+    color: #445964;
+    font-size: 20px;
+    width: auto;
+}
+   
+   
+.why-title .first{
+    color: #445964;
+    font-size: 50px;
+    font-weight: 800;
+    width: 90%;
+}
+   
+   
+.why-title .second {
+    color: #000000;
+    font-size: 50px;
+    font-weight: 800;
+    width: 80%;
+}
+   
+   
+.why-contents{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+   
+   
+.img-block-dark{
+    background-color: var(--dark-gray);
+    width: calc(90% / 3);
+    border-radius: 20px;
+}
+   
+   
+.img-block-gray {
+    background-color: var(--main-color);
+    width: calc(90% / 3);
+    border-radius: 20px;
+}
+   
+   
+.why-contents img{
+    width: 100%;
+}
