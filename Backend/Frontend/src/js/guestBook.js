@@ -39,6 +39,7 @@ commentBtn.addEventListener("click", async(e)=>{
     }
 });
 
+// Function to calculate elapsed time
 const elapsedTime = (start, end) =>{
     const diff = (end - start)/1000;
     const times = [
@@ -70,25 +71,47 @@ const makeComment = async () =>{
         const timeStr = elapsedTime(time,curTime);
 
         console.log(info.time.split("-"));
-        return (`<div class="guest_comment">
-        <div class="guest_comment_left">
-            <div class="guest_comment_left_name">${info.name}</div>
-        </div>
-        <div class="guest_comment_right">
-            <div class="guest_comment_right_box">
-                <div class="guest_comment_right_text">
-                    ${info.comment}
-                </div>
-                <div class="guest_comment_right_time">${timeStr}</div>
+        return (`
+        <div class="guest_comment" data-id="${info.id}">
+            <div class="guest_comment_left">
+                <div class="guest_comment_left_name">${info.name}</div>
             </div>
-            <button class="guest_comment_right_button">Delete</button>
-        </div>
-    </div>`);
+            <div class="guest_comment_right">
+                <div class="guest_comment_right_box">
+                    <div class="guest_comment_right_text">
+                        ${info.comment}
+                    </div>
+                    <div class="guest_comment_right_time">${timeStr}</div>
+                </div>
+                <button class="guest_comment_right_button">Delete</button>
+            </div>
+        </div>`);
     });
 
     const html = htmlList.reduce((a,c)=>a+c,"");
     commentArea.innerHTML = html;
+    
+    const deleteButtons = document.querySelectorAll(".guest_comment_right_button");
+    deleteButtons.forEach(button => {
+        button.addEventListener("click", async (e) => {
+            const commentElement = e.target.closest('.guest_comment');
+            const commentId = commentElement.getAttribute('data-id');
+            await deleteComment(commentId);
+            window.location.reload();
+        });
+    });
+};
+
+const deleteComment = async (id) => {
+    const res = await fetch(`https://comseba-introduce-yhts.onrender.com/deleteComment`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        credentials: 'include',
+        body: JSON.stringify({ id }),
+    });
+    return await res.json();
 };
 
 makeComment();
-
